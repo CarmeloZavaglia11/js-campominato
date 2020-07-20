@@ -21,7 +21,7 @@ var difficult = prompt('Difficolta? (easy, medium, hard) premere senza aggiunger
 switch (difficult) {
     case 'easy':
         min = 1;
-        max = 100;
+        max = 50;
         break;
     case 'medium':
         min = 1;
@@ -29,7 +29,7 @@ switch (difficult) {
         break;
     case 'hard':
         min = 1;
-        max = 50;
+        max = 100;
         break;
     default:
         alert('difficoltà default(medium)');
