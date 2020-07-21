@@ -22,7 +22,7 @@ var btnRetry = document.getElementById('retry');
 switch (difficult) {
     case 'easy':
         min = 1;
-        max = 17;
+        max = 100;
         break;
     case 'medium':
         min = 1;
