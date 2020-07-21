@@ -49,7 +49,7 @@ while (numeriComputer.length < 16){
 
 // RICHIESTA INSERIMENTO UTENTE
 
-
+console.log(numeriComputer);
 
 var numeriUtente = [];
 
@@ -80,6 +80,7 @@ while (i < (max - 16) && perso == false) {
 }
 
 if (numeriUtente.length == (max - 16)) {
+    document.getElementById('applausi').play();
     document.getElementById('scritta-vittoria').innerHTML = ('HAI VINTOOO! (ci sono voluti ' + numeriUtente.length + ' tentativi per vincere)');
     document.getElementById('victory').className = 'victory show';
 }
