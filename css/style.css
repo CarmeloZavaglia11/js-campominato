@@ -42,20 +42,20 @@ body {
     font-size: 50px;
     position: absolute;
     top: 45%;
-    left: 45%;
+    left: 20%;
     transform: translate(-50%, -50%);
     animation: victory 3s ease-in-out infinite;
 }
 
 @keyframes victory {
     0%,100% {
-        transform: rotate(20deg);
+        transform: rotate(10deg);
     }
     25%{
-        transform: rotate(-40deg) scale(1.4);
+        transform: rotate(-20deg) scale(1.4);
     }
     50%{
-        transform: rotate(40deg);
+        transform: rotate(20deg);
     }
     75%{
         transform: rotate(-20deg) scale(1.2);

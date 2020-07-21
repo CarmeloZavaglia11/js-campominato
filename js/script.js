@@ -52,12 +52,12 @@ while (numeriComputer.length < 16){
 
 
 var numeriUtente = [];
-console.log(numeroUtente);
+console.log(numeriComputer);
 
 
 var i = 0;
 var perso = false;
-while (i <= (max - 16) && perso == false) {
+while (i < (max - 16) && perso == false) {
 
     var numeroUtente = parseInt(prompt('Inserisci un numero compreso tra ' + min +  ' e ' + max + ' (tentativi rimanenti:' + (max - 16 - numeriUtente.length ) + ')'));
 
