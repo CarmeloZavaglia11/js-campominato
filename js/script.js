@@ -58,7 +58,7 @@ var i = 0;
 var perso = false;
 while (i < (max - 16) && perso == false) {
 
-    var numeroUtente = parseInt(prompt('Inserisci un numero compreso tra ' + min +  ' e ' + max + ' (tentativi rimanenti:' + (max - 16 - numeriUtente.length ) + ')'));
+    var numeroUtente = parseInt(prompt('Inserisci un numero compreso tra ' + min +  ' e ' + max + ' (tentativi rimanenti: ' + (max - 16 - numeriUtente.length ) + ')'));
 
     if (checking(numeriUtente,numeroUtente)) {
         alert ('numero già inserito,riprova');
