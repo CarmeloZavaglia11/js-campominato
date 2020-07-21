@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.hidden {
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+
+.victory {
+    text-align: center;
+    color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.victory img {
+    width: 100%;
+}
+
+.victory h2 {
+    font-size: 50px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    animation: victory 3s ease-in-out infinite;
+}
+
+@keyframes victory {
+    0%,100% {
+        transform: rotate(20deg);
+    }
+    25%{
+        transform: rotate(-40deg) scale(1.4);
+    }
+    50%{
+        transform: rotate(40deg);
+    }
+    75%{
+        transform: rotate(-20deg) scale(1.2);
+    }
+}
+
+.boom {
+    color: black;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.boom h2 {
+    color: white;
+    font-size: 45px
+}
+
+.boom img {
+    width: 50%;
+    height: 100%;
+}
+
+.retry {
+    text-align: center;
+}
+
+.retry button {
+    margin-top: 20px;
+    color: white;
+    padding: 10px 20px;
+    background-color: black;
+    border-radius: 25px;
+}
+
+.screen {
+    background-image: url('https://images.unsplash.com/photo-1525711857929-4272fb4a040f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    text-transform: uppercase;
+}
+
+select {
+    color: white;
+    padding: 5px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.up-screen {
+    text-align: center;
+}
+
+
+.number input {
+    text-align: center;
+    width: 30%;
+    margin-top: 30px;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+    border-radius: 30%;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+}
+
+.container {
+    width: 60%;
+    padding: 20px;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(0deg, rgba(0,0,0,0.7651261188068977) 21%, rgba(238,14,14,1) 62%);
+    background: -webkit-linear-gradient(0deg, rgba(0,0,0,0.7651261188068977) 21%, rgba(238,14,14,1) 62%);
+    background: linear-gradient(0deg, rgba(0,0,0,0.7651261188068977) 21%, rgba(238,14,14,1) 62%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ee0e0e",GradientType=1);
+    border-radius: 20px;
+    box-shadow: 0 0 14px #000;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    box-shadow: 0 0 14px #000;
+    cursor: pointer;
+}
+
+box:hover {
+    transform: perspective(150px);
+}

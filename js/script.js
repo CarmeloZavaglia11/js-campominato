@@ -14,14 +14,15 @@
 var min;
 var max;
 var numeriComputer = [];
-var difficult = prompt('Difficolta? (easy, medium, hard) premere senza aggiungere per procedere a difficoltà default');
+var difficult = prompt('scegli la difficoltà: easy,medium,hard');
+var btnRetry = document.getElementById('retry');
 
 // SWITCH DIFFICOLTA'
 
 switch (difficult) {
     case 'easy':
         min = 1;
-        max = 50;
+        max = 100;
         break;
     case 'medium':
         min = 1;
@@ -29,7 +30,7 @@ switch (difficult) {
         break;
     case 'hard':
         min = 1;
-        max = 100;
+        max = 50;
         break;
     default:
         alert('difficoltà default(medium)');
@@ -47,30 +48,51 @@ while (numeriComputer.length < 16){
 }
 
 // RICHIESTA INSERIMENTO UTENTE
+
+
+
 var numeriUtente = [];
+console.log(numeroUtente);
+
 
 var i = 0;
-while (i <= (max - 16)) {
-    var numeroUtente = parseInt(prompt('Inserisci un numero compreso tra 1 e 100'));
+var perso = false;
+while (i <= (max - 16) && perso == false) {
+
+    var numeroUtente = parseInt(prompt('Inserisci un numero compreso tra ' + min +  ' e ' + max + ' (tentativi rimanenti:' + (max - 16 - numeriUtente.length ) + ')'));
 
     if (checking(numeriUtente,numeroUtente)) {
-        alert('numero già inserito,riprova');
-    }  else if (numeroUtente < 1 || numeroUtente > 100){
-        alert('il numero non rientra nel range indicato');
+        alert ('numero già inserito,riprova');
+    }  else if (numeroUtente < min || numeroUtente > max){
+        alert ('il numero non rientra nel range indicato');
     }  else if (isNaN(numeroUtente)) {
-        alert('non hai inserito un numero')
+        alert ('non hai inserito un numero');
     }  else if(checking(numeriComputer,numeroUtente)) {
-        alert('HAI PERSO! (hai inserito ' + numeriUtente.length + ' numeri ma purtroppo hai fatto KABOOM!)');
-        break;
+        document.getElementById('sconfitta').innerHTML = ('HAI PERSO! (hai inserito ' + numeriUtente.length + ' numeri ma purtroppo hai fatto KABOOM!)');
+        document.getElementById('bomb').className = 'boom show';
+        perso = true;
     }  else {
         numeriUtente.push(numeroUtente);
     }
 
-    if (numeriUtente.length == (max - 16)) {
-        alert('HAI VINTOOO! (ci sono voluti ' + numeriUtente.length + ' tentativi per vincere)');
-    }
+    box.innerHTML = numeriUtente;
     i++
 }
+
+if (numeriUtente.length == (max - 16)) {
+    document.getElementById('scritta-vittoria').innerHTML = ('HAI VINTOOO! (ci sono voluti ' + numeriUtente.length + ' tentativi per vincere)');
+    document.getElementById('victory').className = 'victory show';
+}
+
+
+// btnRetry FUNCTION
+
+btnRetry.addEventListener('click', function(){
+    location.reload();
+}
+)
+
+
 
 // FUNZIONE NUMERI RANDOM
 
