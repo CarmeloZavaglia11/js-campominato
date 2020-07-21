@@ -70,6 +70,7 @@ while (i <= (max - 16) && perso == false) {
     }  else if(checking(numeriComputer,numeroUtente)) {
         document.getElementById('sconfitta').innerHTML = ('HAI PERSO! (hai inserito ' + numeriUtente.length + ' numeri ma purtroppo hai fatto KABOOM!)');
         document.getElementById('bomb').className = 'boom show';
+        document.getElementById('esplosione').play();
         perso = true;
     }  else {
         numeriUtente.push(numeroUtente);
