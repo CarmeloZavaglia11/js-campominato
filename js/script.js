@@ -52,7 +52,6 @@ while (numeriComputer.length < 16){
 
 
 var numeriUtente = [];
-console.log(numeriComputer);
 
 
 var i = 0;
